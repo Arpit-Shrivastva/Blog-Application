@@ -1,0 +1,20 @@
+section {
+    margin-top: 6%;
+    font-family: 'Poppins';
+
+
+
+    background: hsla(177, 80%, 90%, 1);
+
+    background: linear-gradient(360deg, hsla(177, 80%, 90%, 1) 0%, hsla(235, 100%, 89%, 1) 100%);
+
+    background: -moz-linear-gradient(360deg, hsla(177, 80%, 90%, 1) 0%, hsla(235, 100%, 89%, 1) 100%);
+
+    background: -webkit-linear-gradient(360deg, hsla(177, 80%, 90%, 1) 0%, hsla(235, 100%, 89%, 1) 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D2FAF8", endColorstr="#C6CBFF", GradientType=1);
+
+    .width {
+        width: 95%;
+    }
+}

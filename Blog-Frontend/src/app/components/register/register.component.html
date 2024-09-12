@@ -1,0 +1,60 @@
+<section class="flex justify-between w-full">
+    <div class="w-[45%] h-[10%] mt-4 ml-20">
+        <img class="w-full" src="../../../assets/Sign up-bro.png" alt="register-vector" />
+    </div>
+
+    <div class="form mt-5 w-[50%] ml-32">
+        <p class="font-bold text-3xl text-[#0070BB]" style="margin-bottom: 5%;">Register</p>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"
+            class="border border-[#0E2431] w-[70%] text-center rounded-lg p-10 bg-white"
+            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
+
+            <div class="card flex justify-content-center">
+                <input placeholder="First Name" class="width" type="text" pInputText variant="filled"
+                    formControlName="fname" required />
+            </div>
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Last Name" class="width" type="text" pInputText variant="filled"
+                    formControlName="lname" required />
+            </div>
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Email" class="width" type="email" pInputText variant="filled"
+                    formControlName="email" required />
+            </div>
+
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Password" class="width" type="password" pInputText variant="filled"
+                    formControlName="password" required />
+            </div>
+
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Mobile Number" class="width" type="number" pInputText variant="filled"
+                    formControlName="number" required />
+            </div>
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Image" class="width" type="text" pInputText variant="filled" formControlName="image"
+                    required />
+            </div>
+
+            <div class="card flex justify-content-center mt-3">
+                <input placeholder="Gender" class="width" type="text" pInputText variant="filled"
+                    formControlName="gender" required />
+            </div>
+
+
+
+
+            <div class="card flex justify-content-center mt-4">
+                <button pButton type="submit" label="Register" [disabled]="!registerForm.valid"></button>
+            </div>
+
+        </form>
+
+        <div class="mt-5">
+            <p class="text-[18px] text-[#0070BB]">Already Customer? <a routerLink="/login-page"
+                    class="text-blue-700 hover:underline">Login</a>
+            </p>
+        </div>
+    </div>
+</section>
