@@ -1,0 +1,41 @@
+<section>
+    <div class="text-center pt-[5%]">
+        <p class="text-[#0070BB] font-bold text-[4rem]">Welcome To PageBook</p>
+        <p class="text-[#0070BB] pt-10 text-2xl">Share your Thoughts To The Word Of Book</p>
+    </div>
+    <div class="body text-center m-auto">
+        <form>
+            <form [formGroup]="postForm" (ngSubmit)="onSubmit()"
+                class="border border-[#0E2431] w-[40%] text-center rounded-lg p-10 bg-white m-auto"
+                style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
+
+                <div class="card flex justify-content-center">
+                    <input placeholder="Post Title" class="width" type="text" pInputText variant="filled"
+                        formControlName="name" required />
+                </div>
+                <div class="card flex justify-content-center mt-3">
+                    <input placeholder="Content" class="width" type="text" pInputText variant="filled"
+                        formControlName="content" required />
+                </div>
+                <div class="card flex justify-content-center mt-3">
+                    <input placeholder="Image Link" class="width" type="text" pInputText variant="filled"
+                        formControlName="img" required />
+                </div>
+
+                <div class="card flex justify-content-center mt-3">
+                    <input placeholder="Posted By" class="width" type="text" pInputText variant="filled"
+                        formControlName="postedBy" required />
+                </div>
+
+                <div class="card flex justify-content-center mt-3">
+                    <input placeholder="Tags" class="width" type="text" pInputText variant="filled"
+                        formControlName="tags" required />
+                </div>
+                <div class="card flex justify-content-center mt-4">
+                    <button pButton class="m-auto" type="submit" label="Post"></button>
+                </div>
+
+            </form>
+        </form>
+    </div>
+</section>
