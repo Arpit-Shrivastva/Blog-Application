@@ -1,0 +1,36 @@
+<section class="flex justify-between mt-12 w-full">
+    <div class="w-[45%] mt-4 ml-20">
+        <img class="w-full" src="../../../assets/Authentication-cuate.png" alt="login-vector" />
+    </div>
+    <div class="form mt-28 w-[50%] ml-32">
+        <p class="font-bold text-3xl text-[#0070BB]" style="margin-bottom: 5%;">Login</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+            class="border border-[#0E2431] w-[70%] text-center rounded-lg p-10 bg-white"
+            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
+        
+            <div class="card flex justify-center">
+                <input placeholder="Username" class="width" type="email" pInputText variant="filled" formControlName="email"
+                    required />
+            </div>
+        
+            <div class="card flex justify-center mt-3">
+                <input placeholder="Password" class="width" type="password" pInputText variant="filled"
+                    formControlName="password" required />
+            </div>
+        
+            <div class="card flex justify-center mt-3">
+                <button pButton type="submit" label="Login" [disabled]="!loginForm.valid"></button>
+            </div>
+        
+        </form>
+
+
+
+        <div class="mt-5">
+            <p class="text-[18px] text-[#0070BB]">New Customer? <a routerLink="/register-page"
+                    class="text-blue-700 hover:underline">Register</a>
+            </p>
+        </div>
+    </div>
+</section>
