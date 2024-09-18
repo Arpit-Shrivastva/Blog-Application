@@ -1,0 +1,53 @@
+<section>
+    <div class="flex justify-around">
+        <div class="w-[40%] mt-24">
+            <img class="w-full rounded-lg" src="{{post?.img}}" alt="img" />
+        </div>
+        <div class="w-[50%] mt-24">
+            <p class="text-4xl font-bold">{{post?.name}}</p>
+            <p class="text-lg font-normal">{{post?.content}}</p>
+            <div>
+                <p class="text-[1rem] font-semibold">Posted By : {{post?.postedBy}}</p>
+                <p class="inline font-semibold text-base"><img class="inline mr-4 w-8"
+                        src="../../../assets/visibility.svg" alt="">{{post?.viewCount}}</p>
+            </div>
+            <div class="mt-3">
+                <p class="inline font-semibold text-lg"><img (click)="onlike()" class="inline mr-4 w-9 hover:cursor-pointer hover:text-[#0070BB] hover:bg-[#0070BB] hover:px-1 hover:py-1 hover:rounded-full" src="../../../assets/like.svg"
+                        alt=""> {{post?.likeCount}}</p>
+            </div>
+            <div class="w-[40%] mt-8">
+                <form [formGroup]="commentForm" (ngSubmit)="comment()">
+                    <div class="flex flex-col align-items-center">
+                        <!-- Username input -->
+                        <div class="mb-3 w-full">
+                            <input placeholder="Username" class="p-inputtext w-full" type="text" formControlName="postedBy"
+                                required />
+                        </div>
+            
+                        <!-- Comment textarea -->
+                        <div class="mb-3 w-full">
+                            <textarea rows="5" class="p-inputtextarea w-full" formControlName="content"
+                                placeholder="Write a comment..." required></textarea>
+                        </div>
+            
+                        <!-- Submit button -->
+                        <div class="flex justify-center">
+                            <button pButton type="submit" label="Comment" class="p-button-rounded p-button-primary"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    <div class="mt-10" *ngFor="let data of commentData">
+        <h5>{{data.postedBy}}</h5>
+        <p>{{data.content}}</p>
+    </div>
+
+   
+
+</section>
