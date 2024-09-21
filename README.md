@@ -1,6 +1,8 @@
 # Blog-Application
 This is a full-stack blog application built using Java Spring Boot, MySQL, Angular, and modern UI libraries. The application allows users to create, view, and comment on blog posts. With a robust backend and a responsive, modern frontend, the app ensures a smooth and engaging user experience.
 
+The blog app is developed using Java Spring Boot for the backend to handle API requests, data processing, and business logic. For the front-end, it uses Angular integrated with PrimeNG and Material UI components for building a responsive and feature-rich user interface, styled further with Tailwind CSS. MySQL serves as the database to store user information, blog posts, and comments, ensuring efficient data management and scalability. The application is designed to provide a seamless experience for both users and administrators, with intuitive navigation and modern design elements.
+
 # Tech Stack
 <hr/>
 Backend: Java Spring Boot (REST API) <br>
