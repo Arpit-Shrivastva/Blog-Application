@@ -20,7 +20,6 @@ public class UserServiceImpl implements UserService{
         this.userRepository = userRepository;
     }
 
-
     @Override
     public User saveUser(User user) {
         user.setDate(new Date());
