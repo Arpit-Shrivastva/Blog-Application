@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @Table(name = "user")
 public class User {
-    @Id
+    @Id(strategy = GenerationType.IDENTITY)
     private String email;
     private String fname;
     private String lname;
