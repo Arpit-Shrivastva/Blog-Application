@@ -10,6 +10,7 @@ import { PostService } from 'src/app/services/post.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+  
 export class DashboardComponent {
   constructor(
     private form: FormBuilder,
